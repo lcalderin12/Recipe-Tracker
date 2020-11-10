@@ -3,8 +3,9 @@ module.exports = function(sequelize, DataTypes) {
       name: DataTypes.STRING,
       ingredient: DataTypes.STRING,
       category: DataTypes.STRING,
-      content: DataTypes.TEXT,
-    
-      });
+      content: DataTypes.TEXT
+      },{
+        timestamps: false
+    });
     return Recipe;
   };

@@ -1,9 +1,9 @@
 /*mysql -u root -p < seeds.sql*/  
 
-DROP DATABASE IF EXISTS recipe_db;
--- Creates the "animals_db" database --
-CREATE DATABASE recipe_db;
--- Makes it so all of the following code will affect animals_db --
+-- DROP DATABASE IF EXISTS recipe_db;
+-- -- Creates the "animals_db" database --
+-- CREATE DATABASE recipe_db;
+-- -- Makes it so all of the following code will affect animals_db --
 USE recipe_db;
 
 INSERT INTO Recipes(name, ingredient, category, content)
