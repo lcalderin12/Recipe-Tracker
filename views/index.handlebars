@@ -1,0 +1,66 @@
+
+<div class="jumbotron bg-info ">
+    <div class="container">
+        <img src="" alt="burger" id="burger-pic">
+        <h1>Recipe Tracker!</h1>
+    </div>
+</div>
+<div class="container">
+    <div class="row mb-5 container">
+        <div class="col">
+            <div class="card">
+                <h2 class="card-title bg-warning">Burgers that were not yet Devoured!!</h2>
+                <hr>
+                <div class="card-body container">
+                    <ul>
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                        {{> burger/burger-block devour=true}}
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <h2 class="card-title bg-warning">Burgers that have been Devoured!!</h2>
+                <hr>
+                <div class="card-body container">
+                    <ul>
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        {{> burger/burger-block devour=false}}
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row container mb-5">
+        <div class="col-8">
+            <div class="card">
+                <h2 class="card-title bg-warning">Add another Burger ?</h2>
+                <hr>
+                <div class="card-body">
+                    <form class="create-form">
+                        <div class="form-group">
+                            <label for="brgr">Burger Name:</label>
+                            <input type="text" class="form-control" id="brgr" name="burger_name">
+                        </div>
+                        <div class="form-group">
+                            <label for="dev">Hungry for More?</label><br>
+                            <div class="btn-group" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                    <input type="radio" name="devoured" value="1" checked> More!
+                                </label>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline-primary btn-sm " type="submit">Add Burger</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
