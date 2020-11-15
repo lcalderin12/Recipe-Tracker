@@ -10,7 +10,7 @@ module.exports = function(app) {
 
   // GET route for getting all of the posts and return them to the user with res.json
     app.get("/api/all", function(req, res) {
-      db.Recipes.findAll({}).then(function(result) {
+      db.Recipe.findAll({}).then(function(result) {
         res.json(result);
         });
     });
@@ -29,14 +29,8 @@ module.exports = function(app) {
 
     // POST route for saving a new recipe for creating a recipe using req.content
     app.post("/api/new", function(req, res) {
-      
-      db.Recipe.create ({
-        name: req.body.name,
-        ingredients: req.body.ingredients,
-        category: req.body.category,
-        content: req.body.content
-           
-      }).then(function (result){
+      console.log(req.body)
+      db.Recipe.create(req.body).then(function (result){
         res.json(result);
       })
     });
@@ -46,9 +40,9 @@ module.exports = function(app) {
       
       db.Recipe.update({
           name: req.body.name,
-          ingredients: req.body.ingredients,
+          ingredient: req.body.ingredient,
           category: req.body.category,
-          content: req.body.content
+          content: req.body.content 
       
       }, {
         where: {
