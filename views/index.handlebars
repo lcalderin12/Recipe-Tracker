@@ -1,15 +1,13 @@
- <div class="container">
-
-    <div class="row">
-
-      <div class="col-lg-12">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
 
         <div class="card mb-4">
           <div class="card-header">
             Search for a Recipe
           </div>
           <div class="card-body">
-            <input type="text" id="book-search" class="form-control">
+            <input type="text" id="recipe-search" class="form-control">
             <br>
             <div class="text-right">
               <button class="btn btn-primary btn-md" id="search-btn">
@@ -20,13 +18,13 @@
 
         <div class="card mb-4">
           <div class="card-header">
-            Ingredients Search
+            Ingredient Search
           </div>
           <div class="card-body">
-            <input type="text" id="author-search" class="form-control">
+            <input type="text" id="ingredient-search" class="form-control">
             <br>
             <div class="text-right">
-              <button class="btn btn-primary btn-md" id="author-search-btn">
+              <button class="btn btn-primary btn-md" id="ingredient-search-btn">
                 <span class="fa fa-search"></span> Search</button>
             </div>
           </div>
@@ -37,32 +35,38 @@
             Category Search
           </div>
           <div class="card-body">
-            <input type="text" id="genre-search" class="form-control">
+            <input type="text" id="category-search" class="form-control">
             <br>
             <div class="text-right">
-              <button class="btn btn-primary btn-md" id="genre-search-btn">
+              <button class="btn btn-primary btn-md" id="category-search-btn">
                 <span class="fa fa-search"></span> Search</button>
             </div>
           </div>
         </div>
 
         <div class="card mb-4">
-          <div class="card-header">
+          <div class="card-header text-center">
             Recipe Results
           </div>
-          <div class="card-body">
-            <div class="well" id="stats">
-              <h2 id="name">Recipes:</h2>
+          
+          <div class="card-body" id="stats">
+            {{!-- <div class="well" id="stats"> --}}
+              {{!-- <h2 id="name">Recipes:</h2>
               <div>
-                <h6>
-                  <strong>Ingredients:</strong>
-                  <span id="Ingredients"></span>
-                </h6>
-                <h6>
+                <h5>
+                  <strong>Ingredients</strong>
+                  <span id="ingredients"></span>
+                </h5>
+                <h5>
                   <strong>Category:</strong>
-                  <span id="Category"></span>
-                </h6>
-              </div>
+                  <span id="category"></span>
+                </h5>
+                <h5>
+                  <strong>Content:</strong>
+                  <span id="content"></span>
+                </h5> --}}
+
+              {{!-- </div> --}}
             </div>
           </div>
         </div>
@@ -71,4 +75,6 @@
   </div>
 
   <!-- Custom Script -->
-  {{!-- <script src="js/view.js" type="text/javascript"></script> --}}
+  
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="/assets/js/index.js"></script>
