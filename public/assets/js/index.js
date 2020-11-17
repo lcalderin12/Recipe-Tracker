@@ -49,10 +49,10 @@ function renderRecipes(data) {
     // newSection.attr("id", "recipe-new-" + i);
     // $("#stats").append(newSection);
 
-        div.append("<h2>" + data[i].name + "</h2>");
-        div.append("<p>Ingredients: " + data[i].ingredients + "</p>");
-        div.append("<p>Category: " + data[i].category + "</p>");
-        div.append("<p>Content: " + data[i].content + "</p>");
+        div.append("<h2 id='recipe_name'>" + data[i].name + "</h2>");
+        div.append("<p id='recipe_ingr'>Ingredients: " + data[i].ingredients + "</p>");
+        div.append("<p id='recipe_cat'>Category: " + data[i].category + "</p>");
+        div.append("<p id='recipe_cont'>Content: " + data[i].content + "</p>");
         div.append("<button class='delete' data-id='" + data[i].id + "'>DELETE</button>");
          $("#searchedResult").append(div);
     }
