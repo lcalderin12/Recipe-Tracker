@@ -1,9 +1,10 @@
 {
   "development": {
-    "username": "mg92vuwxzb7kfdir",
-    "password": "hfyu6qy1n6fijzem",
-    "database": "l5p08zfa0ylp1e6v",
-    "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "",
+    "database": "recipe_db",
+    "host": "127.0.0.1",
+    "port": 3306,
     "dialect": "mysql"
    
   },
@@ -12,6 +13,7 @@
     "password": "hfyu6qy1n6fijzem",
     "database": "l5p08zfa0ylp1e6v",
     "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
     "dialect": "mysql"
     
   },
@@ -20,6 +22,7 @@
     "password": "hfyu6qy1n6fijzem",
     "database": "l5p08zfa0ylp1e6v",
     "host": "s3lkt7lynu0uthj8.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
     "dialect": "mysql"
 
   }

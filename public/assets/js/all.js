@@ -13,10 +13,21 @@ $.get("/api/all", function(data) {
 
     // Now  we add our book data to the well we just placed on the page
     $("#recipe-well-" + i).append("<h1>" + (i + 1) + ": " + " " + data[i].name + "</h2>");
-    $("#recipe-well-" + i).append("<h3>Ingredients: " + data[i].ingredient + "</h4>");
+    $("#recipe-well-" + i).append("<h3>Ingredients: " + data[i].ingredients + "</h4>");
     $("#recipe-well-" + i).append("<h3>Category: " + data[i].category + "</h4>");
     $("#recipe-well-" + i).append("<h3>Content: " + data[i].content + "</h4>");
     $("#recipe-well-" + i).append("<button class='delete' data-id='" + data[i].id + "'>DELETE</button>");
   }
+
+  $(".delete").click(function() {
+    $.ajax({
+      method: "DELETE",
+      url: "/api/recipes/" + $(this).attr("data-id")
+    })
+    .then(function() {
+      console.log("Deleted Successfully!");
+    });
+    $(this).closest("div").remove();
+  });
 
 });

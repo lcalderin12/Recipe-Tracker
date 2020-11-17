@@ -7,7 +7,7 @@ $("#add-btn").on("click", function(event) {
   // Make a newRecipe object
   var newRecipe = {
     name: $("#name").val().trim(),
-    ingredient: $("#ingredient").val().trim(),
+    ingredients: $("#ingredients").val().trim(),
     category: $("#category").val().trim(),
     content: $("#content").val().trim()
   };
@@ -22,7 +22,7 @@ $("#add-btn").on("click", function(event) {
 
   // Empty each input box by replacing the value with an empty string
   $("#name").val("");
-  $("#ingredient").val("");
+  $("#ingredients").val("");
   $("#category").val("");
   $("#content").val("");
 

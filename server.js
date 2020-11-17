@@ -2,6 +2,9 @@ var express = require("express");
 var PORT = process.env.PORT || 3030;
 var app = express();
 
+//luis code
+var db = require("./models");
+
 // Serve static content for the app from the "views" directory in the application directory.
 app.use(express.static("public"));
 
@@ -21,6 +24,11 @@ require("./routes/html-routes")(app);
 
 // app.use(routes);
 
+//luis code
+db.sequelize.sync().then(function(){
+
 app.listen(PORT, function() {
   console.log("App now listening at localhost:" + PORT);
 });
+
+})

@@ -15,17 +15,40 @@ module.exports = function(app) {
         });
     });
     
-      // Get route for retrieving a single recipe where the id is equal to req.params.id
-    app.get("/api/recipes/:id", function(req, res) {
-      db.Recipe.findOne ({
+    // Get route for retrieving a single recipe where by name
+    app.get("/api/recipes/:name", function(req, res) {
+      db.Recipe.findAll ({
         where: {
-            id: req.params.id,
+            name: req.params.name
         } 
       }).then(function (result){
           res.json(result);
       });
-     
     });
+
+        // Get route for retrieving a single recipe where by name
+        app.get("/api/recipes/:ingredients", function(req, res) {
+          db.Recipe.findAll ({
+            where: {
+                ingredients: req.params.ingredients
+            } 
+          }).then(function (result){
+              res.json(result);
+          });
+        });
+    
+
+    // Get route for retrieving a single recipe where by category
+    app.get("/api/recipes/category/:category", function(req, res) {
+      db.Recipe.findAll ({
+        where: {
+            category: req.params.category
+        } 
+      }).then(function (result){
+          res.json(result);
+      });
+    });
+
 
     // POST route for saving a new recipe for creating a recipe using req.content
     app.post("/api/new", function(req, res) {
@@ -40,7 +63,7 @@ module.exports = function(app) {
       
       db.Recipe.update({
           name: req.body.name,
-          ingredient: req.body.ingredient,
+          ingredients: req.body.ingredients,
           category: req.body.category,
           content: req.body.content 
       
@@ -54,7 +77,7 @@ module.exports = function(app) {
     });
 
     // DELETE route for deleting recipes where the id is equal to req.params.id,
-    app.delete("/recipes/:id", function(req, res) {
+    app.delete("/api/recipes/delete/:id", function(req, res) {
       db.Recipe.destroy({
         where: {
           id: req.params.id
