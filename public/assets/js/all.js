@@ -18,14 +18,16 @@ $.get("/api/all", function(data) {
   }
 
   $(".delete").click(function() {
+    const context = this;
     $.ajax({
       method: "DELETE",
-      url: "/api/recipes/" + $(this).attr("data-id")
+      url: "/api/all/" + $(this).attr("data-id")
     })
-    .then(function() {
+    .then(function(res) {
+      console.log(res);
       console.log("Deleted Successfully!");
+      $(context).closest("div").remove();
     });
-    $(this).closest("div").remove();
   });
 
 });

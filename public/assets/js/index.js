@@ -6,34 +6,32 @@ $("#search-btn").on("click", function(event) {
 // AJAX get request to our api, including the user's recipe in the url
   $.get("/api/recipes/" + recipeSearch, function(data) {
     console.log(data);
-// Call our renderBooks function to add our recipes to the page
+// Call our renderRecipes function to add our recipes to the page
     renderRecipes(data);
   });
+  $("#recipe-search").val("");
 });
 
-// When user hits the author-search-btn
-$("ingredient-search-btn").on("click", function(event) {
+// When user searches by ingredients
+$("#ingredient-search-btn").on("click", function(event) {
   event.preventDefault();
-// Save the author they typed into the author-search input
   var ingredientSearch = $("#ingredient-search").val().trim();
-// Make an AJAX get request to our api, including the user's author in the url
   $.get("/api/recipes/ingredients/" + ingredientSearch, function(data) {
     console.log(data);
-// Call our renderBooks function to add our books to the page
     renderRecipes(data);
     });
+    $("#ingredient-search").val("");
 });
 
-// When user hits the genre-search-btn
+// When user searches by category
 $("#category-search-btn").on("click", function(event) {
   event.preventDefault();
-// Save the book they typed into the genre-search input
   var categorySearch = $("#category-search").val().trim();
-// Make an AJAX get request to our api, including the user's genre in the url
   $.get("/api/recipes/category/" + categorySearch, function(data) {
       console.log(data);
       renderRecipes(data);
     });
+    $("#category-search").val("");
 });
 
 function renderRecipes(data) {

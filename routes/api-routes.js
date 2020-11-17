@@ -27,7 +27,7 @@ module.exports = function(app) {
     });
 
         // Get route for retrieving a single recipe where by name
-        app.get("/api/recipes/:ingredients", function(req, res) {
+        app.get("/api/recipes/ingredients/:ingredients", function(req, res) {
           db.Recipe.findAll ({
             where: {
                 ingredients: req.params.ingredients
@@ -77,7 +77,7 @@ module.exports = function(app) {
     });
 
     // DELETE route for deleting recipes where the id is equal to req.params.id,
-    app.delete("/api/recipes/delete/:id", function(req, res) {
+    app.delete("/api/all/:id", function(req, res) {
       db.Recipe.destroy({
         where: {
           id: req.params.id
