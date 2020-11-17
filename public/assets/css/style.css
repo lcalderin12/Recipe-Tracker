@@ -1,4 +1,7 @@
-body {
+body{
+    background: linear-gradient(45deg,rgb(200, 228, 44),rgb(0, 130, 43), #00ff2a, #f71111, #6e1202);
+}
+#mainBg {
     
    
     background-image: url('/assets/images/ingredientsBackground.jpg') ;  
@@ -6,7 +9,17 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-size: 1000px 800px;
 
+}
+h1{
+   
+    background: hsla(0, 2%, 53%, 0.8);
+    border-radius: 25px 25px 0 0 ;
+}
+h3{
+    
+    background: hsla(0, 2%, 53%, 0.75);
 }
 
 .jumbotron {
@@ -15,11 +28,11 @@ body {
 width: 50%;
 margin-left: auto;
 margin-right: auto;
-text-decoration: underline;
+/* text-decoration: underline; */
 
 }
 
-.card{
+.card {
 background: hsla(0, 57%, 50%, 0.6);
 width: 50%;
 margin-left: auto;
@@ -30,9 +43,42 @@ text-emphasis: bold;
 .btn {
     background-color: green;
 }
+
+.btn:hover{
+    background-color:red;
+}
 .navbar{
     background-color: rgb(213, 21, 21);
 }
+
+.card-header{
+    font-weight:bold;
+    width:40%;
+    position:right;
+    /* background-color:grey; */
+    background: hsla(0, 2%, 53%, 0.8);
+
+
+}
+
+label{
+    font-weight:bold;
+    width:30%;
+    position:right;
+    /* background-color:grey; */
+    background: hsla(0, 0%, 7%, 0.8);
+    color:white;
+    
+}
+
+#text_box{
+    /* background-color:grey; */
+    /* background: hsla(0, 57%, 50%, 0.6); */
+    background: hsla(0, 2%, 53%, 0.8);
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #footer { 
     background-color: rgb(38, 145, 38); 
 } 
