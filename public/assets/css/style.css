@@ -1,3 +1,38 @@
 body {
-    background-color: aqua;
+    
+   
+    background-image: url('/assets/images/ingredientsBackground.jpg') ;  
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
+
+.jumbotron {
+  
+    background: hsla(0, 57%, 50%, 0.6);
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+text-decoration: underline;
+
+}
+
+.card{
+background: hsla(0, 57%, 50%, 0.6);
+width: 50%;
+margin-left: auto;
+margin-right: auto;
+text-emphasis: bold;
+}
+
+.btn {
+    background-color: green;
+}
+.navbar{
+    background-color: rgb(213, 21, 21);
+}
+#footer { 
+    background-color: rgb(38, 145, 38); 
+} 
