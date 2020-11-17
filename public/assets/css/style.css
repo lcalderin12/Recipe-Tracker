@@ -12,7 +12,7 @@ body{
     background-size: 1000px 800px;
 
 }
-h1{
+h1,h2{
    
     background: hsla(0, 2%, 53%, 0.8);
     border-radius: 25px 25px 0 0 ;
@@ -42,10 +42,12 @@ text-emphasis: bold;
 
 .btn {
     background-color: green;
+    border-color:black;
 }
 
 .btn:hover{
     background-color:red;
+    border-color: yellow;
 }
 .navbar{
     background-color: rgb(213, 21, 21);
@@ -77,6 +79,33 @@ label{
     background: hsla(0, 2%, 53%, 0.8);
     margin-left: auto;
     margin-right: auto;
+}
+#text_box2{
+    /* background-color:grey; */
+    /* background: hsla(0, 57%, 50%, 0.6); */
+    background: hsla(0, 2%, 53%, 0.8);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0 0 25px 25px;
+}
+
+
+#recipe_name{
+    background:rgb(205,133,63);
+    text-align: center;
+}
+#recipe_ingr{
+    background:rgb(4, 163, 4);
+    text-align: center;
+}
+#recipe_cat{
+    background:rgb(139,69,19);
+    text-align: center;
+}
+#recipe_cont{
+    background:rgb(205,133,63);
+    text-align: center;
+    border-radius: 0 0 25px 25px ;
 }
 
 #footer { 
