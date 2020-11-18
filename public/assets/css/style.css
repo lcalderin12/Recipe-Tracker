@@ -28,7 +28,6 @@ h3{
 width: 50%;
 margin-left: auto;
 margin-right: auto;
-/* text-decoration: underline; */
 
 }
 
@@ -48,7 +47,7 @@ text-emphasis: bold;
 .btn:hover{
     background-color:red;
     border-color: yellow;
-}
+} 
 .navbar{
     background-color: rgb(213, 21, 21);
 }
@@ -57,32 +56,36 @@ text-emphasis: bold;
     font-weight:bold;
     width:40%;
     position:right;
-    /* background-color:grey; */
     background: hsla(0, 2%, 53%, 0.8);
 
 
+}
+
+.dropdown-menu{
+    background-color: grey;
+    color:black;
+}
+.dropdown-item:hover{
+background-color: black;
+color:white;
 }
 
 label{
     font-weight:bold;
     width:30%;
     position:right;
-    /* background-color:grey; */
     background: hsla(0, 0%, 7%, 0.8);
     color:white;
     
 }
 
 #text_box{
-    /* background-color:grey; */
-    /* background: hsla(0, 57%, 50%, 0.6); */
+ 
     background: hsla(0, 2%, 53%, 0.8);
     margin-left: auto;
     margin-right: auto;
 }
 #text_box2{
-    /* background-color:grey; */
-    /* background: hsla(0, 57%, 50%, 0.6); */
     background: hsla(0, 2%, 53%, 0.8);
     margin-left: auto;
     margin-right: auto;
@@ -106,6 +109,9 @@ label{
     background:rgb(205,133,63);
     text-align: center;
     border-radius: 0 0 25px 25px ;
+}
+#container_add, #container_all, #container_index {
+    padding-bottom: 100px;
 }
 
 #footer { 
