@@ -12,9 +12,9 @@ module.exports = function(app) {
     if (req.user) {
       res.render("index");
     }
-
+    else 
     res.render("signup");
-  
+    
   });
 
    app.get("/login", function(req, res) {
@@ -33,9 +33,9 @@ module.exports = function(app) {
     res.render("add");
   });
 
-  // app.get("/", isAuthenticated, function(req, res) {
-  //   res.render("index");
-  // });
+  app.get("/", isAuthenticated, function(req, res) {
+    res.render("index");
+  });
 
 
 };
