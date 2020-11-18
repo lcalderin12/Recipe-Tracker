@@ -66,20 +66,11 @@ function renderRecipes(data) {
       $(this).closest("div").remove();
     });
 
-    // $(".delete").click(function(event) {
-    //   event.preventDefault();
-    //   $.ajax({
-    //     method: "DELETE",
-    //     url: "/api/recipes/delete/" + $(this).attr("data-id")
-    //   })
-    //     // On success, run the following code
-    //     .then(function() {
-    //       console.log("Deleted Successfully!");
-    //     });
-
-    //   $(this).closest("div").remove();
-
-    // });
-
   }
+
+  // This file just does a GET request to figure out which user is logged in
+  // and updates the HTML on the page
+  $.get("/api/user_data").then(function(data) {
+    $(".member-name").text(data.email);
+  });
 }

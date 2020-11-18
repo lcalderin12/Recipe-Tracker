@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "",
-    "database": "recipe_db",
-    "host": "127.0.0.1",
+    "username": "dil7rybqu6y8ie0c",
+    "password": "spdovdyvxhvrel63",
+    "database": "ac1ozvbffj0vfm1j",
+    "host": "sm9j2j5q6c8bpgyq.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "port": 3306,
     "dialect": "mysql"
    

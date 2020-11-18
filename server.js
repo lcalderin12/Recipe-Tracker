@@ -1,16 +1,22 @@
 var express = require("express");
+var session = require("express-session");
+// Requiring passport as we've configured it
+var passport = require("./config/passport");
+
 var PORT = process.env.PORT || 3030;
 var app = express();
 
 //luis code
 var db = require("./models");
 
-// Serve static content for the app from the "views" directory in the application directory.
-app.use(express.static("public"));
-
-// Parse request body as JSON
+var app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(express.static("public"));
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // SETUP HANDLEBARS
 var exphbs = require("express-handlebars");
