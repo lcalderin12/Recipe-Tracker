@@ -126,7 +126,7 @@ label {
     background-color:rgb(46, 38, 38);
 }
 
-#login_link, #signup_link {
+#login_link, #contact_link {
     color: yellow;
     font-weight: bolder;
 }
