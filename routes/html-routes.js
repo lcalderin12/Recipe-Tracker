@@ -1,18 +1,28 @@
-// *********************************************************************************
-// html-routes.js - this file offers a set of routes for sending users to the various html pages
-// *********************************************************************************
-
+// Requiring our custom middleware for checking if a user is logged in
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 var path = require("path");
+const { get } = require("http");
 
 // Routes
 
 module.exports = function(app) {
-
-  // Each of the below routes just handles the HTML page that the user gets sent to.
-
-  // index route loads view/index.handlebars
+// index route loads view/index.handlebars
   app.get("/", function(req, res) {
-    res.render("index");
+
+    if (req.user) {
+      res.render("index");
+    }
+    else 
+    res.render("signup");
+    
+  });
+
+   app.get("/login", function(req, res) {
+    // If the user already has an account send them to the members page
+    if (req.user) {
+      res.render("index");
+    }
+    res.render("login");
   });
 
   app.get("/all", function(req, res) {
@@ -22,5 +32,10 @@ module.exports = function(app) {
   app.get("/add", function(req, res) {
     res.render("add");
   });
+
+  app.get("/", isAuthenticated, function(req, res) {
+    res.render("index");
+  });
+
 
 };

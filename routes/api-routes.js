@@ -1,12 +1,37 @@
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *******************************************************************************
 
-// Requiring our Recipe model
 var db = require("../models");
+var passport = require("../config/passport");
 
 // Routes
 
 module.exports = function(app) {
+
+
+  app.post("/api/login", passport.authenticate("local"), function(req, res) {
+    res.json(req.user);
+  });
+
+  app.post("/api/signup", function(req, res) {
+    db.User.create({
+      email: req.body.email,
+      password: req.body.password
+    })
+      .then(function() {
+        res.redirect(307, "/api/login");
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
+  });
+
+    // Route for logging user out
+  app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("login");
+  });
+
 
   // GET route for getting all of the posts and return them to the user with res.json
     app.get("/api/all", function(req, res) {
@@ -87,16 +112,6 @@ module.exports = function(app) {
       });
     });
 
- // Get route for returning posts of a specific category ind all posts where the category is equal to req.params.category
-  // app.get("/recipes/category/:category", function(req, res) {
-  //   db.Recipe.findAll ({
-  //       where: {
-  //           category: req.params.category,
-  //       } 
-  //   }).then(function (result){
-  //       res.json(result);
-  //   });
 
-  // });
 
 };
