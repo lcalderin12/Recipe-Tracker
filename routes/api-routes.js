@@ -29,7 +29,7 @@ module.exports = function(app) {
     // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
-    res.redirect("/");
+    res.redirect("login");
   });
 
 
@@ -112,16 +112,6 @@ module.exports = function(app) {
       });
     });
 
- // Get route for returning posts of a specific category ind all posts where the category is equal to req.params.category
-  // app.get("/recipes/category/:category", function(req, res) {
-  //   db.Recipe.findAll ({
-  //       where: {
-  //           category: req.params.category,
-  //       } 
-  //   }).then(function (result){
-  //       res.json(result);
-  //   });
 
-  // });
 
 };
