@@ -14,7 +14,7 @@ $.get("/api/all", function(data) {
     $("#recipe-well-" + i).append("<h3 id='recipe_ingr'>Ingredients: " + data[i].ingredients + "</h4>");
     $("#recipe-well-" + i).append("<h3 id='recipe_cat'>Category: " + data[i].category + "</h4>");
     $("#recipe-well-" + i).append("<h3 id='recipe_cont'>Content: " + data[i].content + "</h4>");
-    $("#recipe-well-" + i).append("<button class='delete' data-id='" + data[i].id + "'>DELETE</button>");
+    $("#recipe-well-" + i).append("<button class='delete' data-id='" + data[i].id + "'>DELETE</button><br><br><br>");
   }
 
   $(".delete").click(function() {

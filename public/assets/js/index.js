@@ -51,7 +51,7 @@ function renderRecipes(data) {
         div.append("<p id='recipe_ingr'>Ingredients: " + data[i].ingredients + "</p>");
         div.append("<p id='recipe_cat'>Category: " + data[i].category + "</p>");
         div.append("<p id='recipe_cont'>Content: " + data[i].content + "</p>");
-        div.append("<button class='delete' data-id='" + data[i].id + "'>DELETE</button>");
+        div.append("<button class='delete' data-id='" + data[i].id + "'>DELETE</button><br><br>");
          $("#searchedResult").append(div);
     }
 
