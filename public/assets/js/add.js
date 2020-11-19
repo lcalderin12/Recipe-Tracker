@@ -1,4 +1,4 @@
-// The code in add.js handles what happens when the user clicks the "Add a book" button.
+// The code in add.js handles what happens when the user clicks the "Add New Recipe" button
 
 // When user clicks add-btn
 $("#add-btn").on("click", function(event) {
@@ -16,9 +16,15 @@ $("#add-btn").on("click", function(event) {
   $.post("/api/new", newRecipe)
     // On success, run the following code
     .then(function(data) {
+      window.location.replace("/all");
       // Log the data we found
       console.log(data);
     });
+
+
+
+ 
+
 
   // Empty each input box by replacing the value with an empty string
   $("#name").val("");

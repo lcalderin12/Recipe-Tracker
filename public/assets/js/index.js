@@ -10,6 +10,11 @@ $("#search-btn").on("click", function(event) {
     renderRecipes(data);
   });
   $("#recipe-search").val("");
+  
+    $('body, html').animate({
+      scrollTop: $("#searchedResult").offset().top
+    }, 600);
+
 });
 
 // When user searches by ingredients
@@ -21,6 +26,10 @@ $("#ingredient-search-btn").on("click", function(event) {
     renderRecipes(data);
     });
     $("#ingredient-search").val("");
+
+    $('body, html').animate({
+      scrollTop: $("#searchedResult").offset().top
+    }, 600);
 });
 
 // When user searches by category
@@ -32,6 +41,10 @@ $("#category-search-btn").on("click", function(event) {
       renderRecipes(data);
     });
     $("#category-search").val("");
+
+    $('body, html').animate({
+      scrollTop: $("#searchedResult").offset().top
+    }, 600);
 });
 
 function renderRecipes(data) {
