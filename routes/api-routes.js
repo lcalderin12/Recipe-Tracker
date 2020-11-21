@@ -84,17 +84,18 @@ module.exports = function(app) {
     });
 
 
-    app.put("/recipes", function(req, res) {
-      
+    app.put("/recipes/:id", function(req, res) {
+      console.log(req.body)
+      console.log(req.params.id)
       db.Recipe.update({
           name: req.body.name,
           ingredients: req.body.ingredients,
           category: req.body.category,
-          content: req.body.content 
+          content:  req.body.content
       
       }, {
         where: {
-          id: req.body.id
+          id: req.params.id
         }
       }).then(function(result) {
         res.json(result);
