@@ -1,3 +1,4 @@
+/* eslint-disable no-use-before-define */
 // Search for recipe based on name
 $("#search-btn").on("click", function (event) {
   event.preventDefault();
@@ -11,7 +12,7 @@ $("#search-btn").on("click", function (event) {
   });
   $("#recipe-search").val("");
 
-  $('body, html').animate({
+  $("body, html").animate({
     scrollTop: $("#searchedResult").offset().top
   }, 600);
 
@@ -27,7 +28,7 @@ $("#ingredient-search-btn").on("click", function (event) {
   });
   $("#ingredient-search").val("");
 
-  $('body, html').animate({
+  $("body, html").animate({
     scrollTop: $("#searchedResult").offset().top
   }, 600);
 });
@@ -42,7 +43,7 @@ $("#category-search-btn").on("click", function (event) {
   });
   $("#category-search").val("");
 
-  $('body, html').animate({
+  $("body, html").animate({
     scrollTop: $("#searchedResult").offset().top
   }, 600);
 });
