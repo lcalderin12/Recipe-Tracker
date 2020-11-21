@@ -14,11 +14,12 @@ passport.use(new LocalStrategy(
         email: email
       }
     }).then(function(dbUser) {
-    
+
       if (!dbUser) {
         return done(null, false, {
           message: "Incorrect email."
         });
+      // eslint-disable-next-line brace-style
       }
       // If there is a user with the given email, but the password the user gives us is incorrect
       else if (!dbUser.validPassword(password)) {
