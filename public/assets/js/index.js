@@ -11,7 +11,7 @@ $("#search-btn").on("click", function (event) {
     renderRecipes(data);
   });
   $("#recipe-search").val("");
-
+  //scroll down to results after pressing search button
   $("body, html").animate({
     scrollTop: $("#searchedResult").offset().top
   }, 600);
@@ -27,7 +27,7 @@ $("#ingredient-search-btn").on("click", function (event) {
     renderRecipes(data);
   });
   $("#ingredient-search").val("");
-
+  //scroll down to results after pressing search button
   $("body, html").animate({
     scrollTop: $("#searchedResult").offset().top
   }, 600);
@@ -42,7 +42,7 @@ $("#category-search-btn").on("click", function (event) {
     renderRecipes(data);
   });
   $("#category-search").val("");
-
+  //scroll down to results after pressing search button
   $("body, html").animate({
     scrollTop: $("#searchedResult").offset().top
   }, 600);

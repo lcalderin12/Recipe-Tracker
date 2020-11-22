@@ -61,17 +61,50 @@ h3 {
     background-color: grey;
     color:black;
 }
+
 .dropdown-item:hover {
     background-color: black;
     color:white;
 }
 
+.modal-header {
+    background: linear-gradient( rgb(228, 44, 173),rgb(109, 5, 95));
+}
+
+.modal-title {
+    padding: 0 10px 0 10px;
+    background: rgb(109, 5, 95);
+    color: yellow;
+}
+
+.modal-body {
+    background: black;
+    /* background: linear-gradient( rgb(200, 228, 44),rgb(0, 130, 43), #00ff2a); */
+    color: red;
+}
+
+.modal-body label {
+    border-radius: 0 25px 0 0 ;
+    width: 25%;
+    background: rgb(109, 5, 95);
+    color: yellow;
+}
+
+.modal-footer {
+    background-color: rgb(109, 5, 95);
+    color: yellow;
+}
+
+.modal-footer .update {
+    background: grey;
+}
+
 label {
-    font-weight:bold;
-    width:50%;
-    position:right;
+    font-weight: bold;
+    width: 50%;
+    position: right;
     background: hsla(0, 0%, 7%, 0.8);
-    color:white; 
+    color: white; 
 }
 
 #text_box {
