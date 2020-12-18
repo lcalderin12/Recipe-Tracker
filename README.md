@@ -49,9 +49,9 @@ Use this is recipe app to track your favorite app'etizers, or any food of your l
 ![](img/search.png)
 
 ## Contributors
-[MrDawit Mr. Dawit](https://github.com/MrDawit)
+[MrDawit Shalom Dawit](https://github.com/MrDawit)
 
-[0216johnsoneric Eric](https://github.com/0216johnsoneric)
+[0216johnsoneric Eric Johnson](https://github.com/0216johnsoneric)
 
 [lcalderin12 Luis Calderin](https://github.com/lcalderin12)
 

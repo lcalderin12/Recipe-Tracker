@@ -12,13 +12,14 @@
     "url": "git+https://github.com/lcalderin12/Project-2.git"
   },
   "author": "luis calderin, eric johnson, shalom dawit",
-  "license": "ISC",
+  "license": "Apache V2.0",
   "bugs": {
     "url": "https://github.com/lcalderin12/Project-2/issues"
   },
   "homepage": "https://github.com/lcalderin12/Project-2#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "dotenv": "^8.2.0",
     "eslint": "^7.14.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
