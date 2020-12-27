@@ -11,10 +11,9 @@ module.exports = function (app) {
 
     if (req.user) {
       res.render("index");
-    }
-    else
+    } else {
       res.render("signup");
-
+    }
   });
 
   app.get("/login", function (req, res) {
@@ -31,6 +30,10 @@ module.exports = function (app) {
 
   app.get("/add", function (req, res) {
     res.render("add");
+  });
+
+  app.get("/contact", function (req, res) {
+    res.render("contact");
   });
 
   app.get("/", isAuthenticated, function (req, res) {
