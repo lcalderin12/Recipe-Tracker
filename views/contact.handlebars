@@ -24,27 +24,29 @@
         </div>
 
         <div class="card-body">
-          <form action="" method="POST" role="form">
+          <form action="/api/contact" method="POST" role="form">
             <div class="form-group">
-              <label for="">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Name">
+              <label for="">Names</label>
+              <input type="text" class="form-control" id="contactName" name="contactName" placeholder="Name">
             </div>
             <div class="form-group">
               <label for="">How can we reach you?</label>
-              <input type="text" class="form-control" id="ingredients" placeholder="e.g., Email, social media user-handle">
+              <input type="text" class="form-control" id="contactInfo" name="contactInfo"
+                placeholder="e.g., Email, social media user-handle">
             </div>
             <div class="form-group">
               <label for="">Issue Category</label>
-              <input type="text" class="form-control" id="category" placeholder="e.g., Login issue, Site Troubleshoot, Suggestion">
+              <input type="text" class="form-control" id="category" name="category"
+                placeholder="e.g., Login issue, Site Troubleshoot, Suggestion">
             </div>
             <div class="form-group">
               <label for="">What is the issue or question?</label>
-              <textarea type="text" class="form-control" id="content" placeholder=""></textarea>
+              <input type="text" class="form-control" id="content" name="content" placeholder="">
             </div>
           </form>
           <br>
           <div class="text-right">
-            <button type="submit" class="btn btn-primary btn-md" id="add-btn">
+            <button type="submit" class="btn btn-primary btn-md" id="email-btn">
               <span class="fa fa-book"></span> Send Request</button>
           </div>
         </div>
@@ -57,4 +59,4 @@
 
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="/assets/js/add.js"></script>
+<script src="/assets/js/contact.js"></script>
