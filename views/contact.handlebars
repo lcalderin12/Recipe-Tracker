@@ -1,4 +1,4 @@
-{{>header}}
+{{>headerAlt_two}}
 
 <div class="container">
 
@@ -20,33 +20,34 @@
     <div class="col-lg-12">
       <div class="card">
         <div class="card-header">
-          Add Recipe
+          Need Help or Want to Leave a Comment?
         </div>
 
         <div class="card-body">
-          <form action="" method="POST" role="form">
+          <form action="/api/contact" method="POST" role="form">
             <div class="form-group">
-              <label for="">Recipe Name</label>
-              <input type="text" class="form-control" id="name" placeholder="">
+              <label for="">Names</label>
+              <input type="text" class="form-control" id="contactName" name="contactName" placeholder="Name">
             </div>
             <div class="form-group">
-              <label for="">Ingredient</label>
-              <input type="text" class="form-control" id="ingredients" placeholder="">
+              <label for="">How can we reach you?</label>
+              <input type="text" class="form-control" id="contactInfo" name="contactInfo"
+                placeholder="e.g., Email, social media user-handle">
             </div>
             <div class="form-group">
-              <label for="">Category</label>
-              <input type="text" class="form-control" id="category" placeholder="">
+              <label for="">Issue Category</label>
+              <input type="text" class="form-control" id="category" name="category"
+                placeholder="e.g., Login issue, Site Troubleshoot, Suggestion">
             </div>
             <div class="form-group">
-              <label for="">Content</label>
-              <textarea type="text" class="form-control" id="content" placeholder=""></textarea>
+              <label for="">What is the issue or question?</label>
+              <input type="text" class="form-control" id="content" name="content" placeholder="">
             </div>
           </form>
           <br>
-            <a class="text-left" id="contact_link" href="/contact">CONTACT</a>
           <div class="text-right">
-            <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-              <span class="fa fa-book"></span> Add your Recipe!</button>
+            <button type="submit" class="btn btn-primary btn-md" id="email-btn">
+              <span class="fa fa-book"></span> Send Request</button>
           </div>
         </div>
 
@@ -58,4 +59,4 @@
 
 
 <script src="https://code.jquery.com/jquery.js"></script>
-<script src="/assets/js/add.js"></script>
+<script src="/assets/js/contact.js"></script>

@@ -1,8 +1,10 @@
-// var env = require("dotenv").load();
+
+require("dotenv");
 var express = require("express");
 var session = require("express-session");
 // Requiring passport as we've configured it
 var passport = require("./config/passport");
+
 
 var PORT = process.env.PORT || 3030;
 var app = express();
@@ -20,7 +22,9 @@ app.use(passport.session());
 // SETUP HANDLEBARS
 var exphbs = require("express-handlebars");
 
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+// changed inorder to add partials folder
+app.engine("handlebars", exphbs({ extname: ".handlebars" }));
 app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
@@ -30,10 +34,11 @@ require("./routes/html-routes")(app);
 // app.use(routes);
 
 //luis code
-db.sequelize.sync().then(function(){
+db.sequelize.sync().then(function () {
 
-  app.listen(PORT, function() {
+  app.listen(PORT, function () {
     console.log("App now listening at localhost:" + PORT);
   });
 
 });
+

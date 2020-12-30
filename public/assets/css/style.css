@@ -167,3 +167,7 @@ label {
 #footer { 
     background-color: rgb(38, 145, 38); 
 } 
+/* space between anchors */
+a+a {
+    margin-left: 10px;
+  }
